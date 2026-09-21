@@ -49,7 +49,7 @@ class ACEStepInstaller:
         for var in ["JPY_PARENT_PID", "IPYKERNEL_CELL_NAME", "PYDEVD_USE_FRAME_EVAL"]:
             env.pop(var, None)
         env["MPLBACKEND"] = "Agg"
-        env["UV_CACHE_DIR"] = str(self.base / "cache" / "uv")
+        env["UV_CACHE_DIR"] = "/content/uv_cache"
         env["HF_HOME"] = str(self.base / "cache" / "huggingface")
         return env
 
